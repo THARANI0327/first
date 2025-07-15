@@ -11,9 +11,9 @@ Original file is located at
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 # %matplotlib inline
 sns.set(color_codes = True)
+import seaborn as sns
 
 df=pd.read_csv('/content/enhanced_zomato_dataset_clean.csv')
 print(df.head())
