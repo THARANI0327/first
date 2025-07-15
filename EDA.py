@@ -10,8 +10,6 @@ df=pd.read_csv('/content/enhanced_zomato_dataset_clean.csv')
 print(df.head())
 print(df.tail())
 
-
-
 df.shape
 
 df.info
@@ -26,11 +24,9 @@ df.count()
 
 df=df.drop_duplicates()
 df.head()
-
 df.count()
 
 print(df.isnull().sum())
-
 df=df.dropna()
 df.count()
 
@@ -39,12 +35,10 @@ sns.boxplot(x=df['Avg_Price_Cuisine'])
 sns.boxplot(x=df['Best_Seller'])
 
 sns.boxplot(x=df['Avg_Price_Restaurant'])
-
 df.Average_Rating.value_counts().nlargest(20).plot(kind='bar')
 
 cor=df.select_dtypes(include=np.number).corr()
 cor
-
 plt.figure(figsize=(10,10))
 sns.heatmap(cor,annot=True)
 
